@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.my-box{
+    background-color: blue;
+}
+
+.my-box div{
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.my-box .div1{
+    background-color: purple;
+}
+
+.my-box .div2{
+    background-color: red;
+}
+
+.my-box .div3{
+    background-color: black;
+}
+
