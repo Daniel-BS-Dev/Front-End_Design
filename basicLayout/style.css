@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #ebdfdf;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: blueviolet;
+}
+
+main{
+    min-width: 370px;
+    background-color: #fff;
+    margin: 30px 100px 30px 100px;
+    box-shadow: 10px 10px 15px #000;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.box-container{
+    margin-left: 10px;
+}
+
+.box{
+    width: 300px;
+    height: 150px;
+    background-color: chartreuse;
+    border:5px solid blueviolet;
+}
+
+.btn{
+    width: 300px;
+    height: 40px;
+    background-color: blueviolet;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
