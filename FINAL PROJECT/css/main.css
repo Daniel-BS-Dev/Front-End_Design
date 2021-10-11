@@ -42,6 +42,24 @@
     .jl-menu{
         display: none;
     }
+
+    .jl-btn-contact{
+        width: 45px;
+        height: 45px;
+        display: block;
+        background: #2ccb69;
+        position: fixed;
+        bottom: 45px;
+        right:45px;
+        border-radius: 50%;
+        z-index: 200;
+        background-image: url('../image/icon-contact-close.svg');
+        background-repeat: no-repeat;
+        transition: all .02s ease-out;
+    }
+    .jl-btn-contact:hover{
+        background-position-y: -45px;
+    }
 }
 
 @media  screen and (min-width:576px) {
