@@ -57,6 +57,7 @@ p{
         position: fixed;
         bottom: 45px;
         right:45px;
+        cursor: pointer;
         border-radius: 50%;
         z-index: 200;
         background-image: url('../image/icon-contact-close.svg');
@@ -64,13 +65,11 @@ p{
         transition: all .02s ease-out;
     }
 
-    .jl-btn-contact:hover{
-        background-position-y: -45px;
-    }
-
+   
     .jl-contact-info{
         width: 245px;
         height: 165px;
+        display: none;
         padding: 25px;
         position: fixed;
         bottom: 115px;
@@ -174,6 +173,7 @@ p{
 
     .jl-menu a:hover{
         color:#2ccb69;
+        
     }
 
     /* continuação da minha formataçõa */
@@ -207,6 +207,7 @@ p{
 }
 
 /*utilitarian classes*/
+
 .jl-title{
    font-family: 'Abril fatface', serif;
    font-weight: normal;
@@ -228,7 +229,8 @@ p{
    color: #000;
 }
 
-/* background*/
+/* background */
+
 .jl-green-bg{
     background: #2CCB69;
 }
@@ -243,4 +245,14 @@ p{
 
 .jl-black-bg{
   background: #000;
+}
+
+/* behavior classes */
+
+.jl-is-open{
+    display: block;
+}
+
+.jl-change-icon {
+    background-position-y: -45px;
 }
