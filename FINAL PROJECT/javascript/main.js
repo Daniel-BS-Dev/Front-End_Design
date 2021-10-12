@@ -1,5 +1,6 @@
 // Declarando variaveis
 var btnContact = document.querySelector('.jl-btn-contact');
+var toggleModal = document.querySelectorAll('.jl-toggle-modal');
 
 //Page Preloader
 window.addEventListener('load', function () {
@@ -22,3 +23,15 @@ btnContact.addEventListener('click', function(){
 
 
 });
+
+// Abrindo e Fechando o Modal de Orçamento
+for(var i=0; i < toggleModal.length; i++){
+    toggleModal[i].addEventListener('click', function(){
+        var overlay = document.querySelector('.jl-overlay');
+        var modalBudget = document.querySelector('#jl-budget');
+
+       overlay.classList.toggle('jl-is-open');
+       modalBudget.classList.toggle('jl-is-open');
+       modalBudget.classList.toggle('jl-slide-top-in');
+    });
+}
