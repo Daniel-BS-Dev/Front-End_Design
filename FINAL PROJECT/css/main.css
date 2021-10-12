@@ -217,6 +217,7 @@ p{
         text-align: justify;
         line-height: 25px;
         word-spacing: 2%;
+        margin-bottom: 4px;
     }
 
     .jl-scroll-down{
@@ -344,16 +345,49 @@ p{
 
 .jl-btn{
     display: table;
-    padding: 0 35px;
-    background: #2CCB69;
-    height: 45px;
-    color: #000;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    line-height: 45px;
     font-weight: 600;
-    border-radius: 10px;
+    border: none;
+    transition: all 0.2s ease-out;
     
+}
+
+.jl-btn-medium{
+     height: 38px;
+     padding: 0 27px;
+     border-radius: 19px;
+     font-size: 14px;
+     
+}
+
+.jl-btn-green{
+    background: #2CCB69;
+    color: #1c1c1c;
+}
+
+.jl-btn-green:hover{
+    background: rgb(6, 135, 55) ;
+    color: #fff;
+    
+}
+
+.jl-btn-dark{
+    background: #151515;
+    color: #2ccb69;
+}
+
+.jl-btn-dark:hover{
+  background: #3a3a3a;
+  color:#fff;
+
+}
+
+.jl-btn-large{
+    height: 45px;
+    padding: 0 35px;
+    border-radius: 23px;
+    font-size: 16px;
 }
 
 /*utilitarian classes*/
