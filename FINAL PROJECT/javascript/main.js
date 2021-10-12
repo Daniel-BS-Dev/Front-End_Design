@@ -35,3 +35,14 @@ for(var i=0; i < toggleModal.length; i++){
        modalBudget.classList.toggle('jl-slide-top-in');
     });
 }
+
+// animando elementos on scroll com waypoints
+var myscrollDown =  document.querySelector('.jl-scroll-down');
+var waypoint = new Waypoint(
+    {
+    element:myscrollDown,
+    handler: function() {
+      myscrollDown.classList.toggle('jl-fade-out');
+    },
+    offset:'80%'
+  })
