@@ -1,12 +1,16 @@
 // Declarando variaveis
 var btnContact = document.querySelector('.jl-btn-contact');
 
-//page Preloader
-window.addEventListener('load',function(){
-   var pagePreloader = document.querySelector('.jl-preloader');
-    pagePreloader.classList.add('jl-fade-out');
+//Page Preloader
+window.addEventListener('load', function () {
+    var pagePreloder = document.querySelector('.jl-preloader');
+    pagePreloder.classList.add('jl-fade-out');
 
+    setTimeout(function () {
+        pagePreloder.style.display = 'none';
+    }, 2000);
 });
+
 
 //Abrindo e Fechando Informações de Contato
 btnContact.addEventListener('click', function(){
@@ -15,5 +19,6 @@ btnContact.addEventListener('click', function(){
    // toggle    -> quando eu click adicione quando eu click novamente remova
    boxContact.classList.toggle('jl-is-open');
    this.classList.toggle('jl-change-icon');
+
 
 });
