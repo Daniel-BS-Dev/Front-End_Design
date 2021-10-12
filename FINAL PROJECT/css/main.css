@@ -340,6 +340,22 @@ p{
     
 }
 
+/* buttons */
+
+.jl-btn{
+    display: table;
+    padding: 0 35px;
+    background: #2CCB69;
+    height: 45px;
+    color: #000;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 45px;
+    font-weight: 600;
+    border-radius: 10px;
+    
+}
+
 /*utilitarian classes*/
 
 .jl-title{
