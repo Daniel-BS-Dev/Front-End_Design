@@ -76,3 +76,32 @@ var waypoint = new Waypoint(
 
 
  // Fazendo animação do slider onClick
+
+ var prevItem = document.querySelector('.jl-item-prev');
+ var nextItem = document.querySelector('.jl-item-next');
+ var sliderPos = 0;
+
+ nextItem.addEventListener('click', function(){
+     var lastItem = sliderListWidth - containerWidth;
+     if(-sliderPos === lastItem){
+        return;
+     }
+     sliderPos -= containerWidth;
+      anime({
+          targets: sliderList,
+          translateX: sliderPos
+      });
+      console.log(sliderPos)
+ });
+
+ prevItem.addEventListener('click', function(){
+    if(sliderPos === 0){
+       return;
+    }
+    sliderPos += containerWidth;
+     anime({
+         targets: sliderList,
+         translateX: sliderPos
+     });
+     console.log(sliderPos)
+});
