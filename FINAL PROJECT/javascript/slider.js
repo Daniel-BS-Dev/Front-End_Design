@@ -12,7 +12,7 @@
  var currentSlide = document.querySelector('.jl-current-slide');
  var totalSlide = document.querySelector('.jl-total-slide');
  var currentCounter = 1;
-
+ var asideItems = document.querySelectorAll('.jl-item-navigator a');
  
  //capturando largura individuais
  var containerWidth = sliderContainer.parentElement.offsetWidth;
@@ -85,18 +85,50 @@
    }
  }
 
+ //Set Active Nav
+ var setActiveAside = function(){
+     for(var a=0; a < asideItems.length; a++){
+         let myAside = parseInt(asideItems[a].getAttribute('data-aside'));
+         if(myAside === currentCounter){
+             asideItems[a].classList.add('jl-item-active');
+
+             anime({
+                targets: '.jl-item-active',
+                width:90
+             });
+         }
+     }
+ }
+
+ var changeActive = function(){
+     for(var rm=0; rm < asideItems.length; rm++){
+        asideItems[rm].classList.remove('jl-item-active');
+
+        anime({
+            targets: asideItems[rm],
+            width:20
+         });
+     }
+     setActiveAside();
+ }
 
  // ACTIONS
+ anime({
+    targets: '.jl-item-active',
+    width:90
+ });
+
  totalSlide.innerHTML=counterFormater(sliderTotalItems);
 
 
  nextItem.addEventListener('click', function(){
      nextSliderAnime();
      counterAdd();
+     changeActive();
  });
 
  prevItem.addEventListener('click', function(){
      prevSliderAnime();
      counterRemove();
-   
+     changeActive();
 });

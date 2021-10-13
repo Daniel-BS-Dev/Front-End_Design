@@ -399,7 +399,6 @@ p, label{
     }
 
     .jl-item-navigator a.jl-item-active{
-        width: 60%;
         background-color: #2CCB69;
     }
 
