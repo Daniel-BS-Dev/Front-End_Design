@@ -22,6 +22,7 @@ btnContact.addEventListener('click', function(){
    this.classList.toggle('jl-change-icon');
 
 
+
 });
 
 // Abrindo e Fechando o Modal de Orçamento
@@ -33,7 +34,9 @@ for(var i=0; i < toggleModal.length; i++){
        overlay.classList.toggle('jl-is-open');
        modalBudget.classList.toggle('jl-is-open');
        modalBudget.classList.toggle('jl-slide-top-in');
-    });
+
+
+   });
 }
 
 // animando elementos on scroll com waypoints
@@ -45,4 +48,31 @@ var waypoint = new Waypoint(
       myscrollDown.classList.toggle('jl-fade-out');
     },
     offset:'80%'
-  })
+ });
+
+ // PORTFOLIO SLIDER
+
+ // Dclarando variaveis do slider
+ var sliderContainer = document.querySelector('.jl-slider-container');
+ var sliderList = document.querySelector('.jl-slider-list');
+ var sliderItems = document.querySelectorAll('.jl-slider-item');
+ var sliderListWidth = null;
+
+ //capturando largura individuais
+ var containerWidth = sliderContainer.parentElement.offsetWidth;
+ 
+
+ // Passando largura dinâmicas
+ sliderContainer.style.width= containerWidth+'px';
+
+ for(var p=0; p<sliderItems.length; p++){
+     sliderItems[p].style.width = containerWidth+'px';
+     var sliderItemWidth = sliderItems[p].offsetWidth;
+
+     sliderListWidth += sliderItemWidth;
+ }
+
+ sliderList.style.width = sliderListWidth +'px';
+
+
+ // Fazendo animação do slider onClick

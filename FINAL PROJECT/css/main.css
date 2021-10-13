@@ -351,43 +351,116 @@ p, label{
         width: 145px;
         height: 400px;
         display: table;
-        background: red;
         position: absolute;
         left: 0;
         top: 30vh;
     }
 
-    .jl-item-counter{
+    .jl-navigator-counter{
         width: 100%;
         height: 80px;
         display: block;
-        background-color: blue;
         margin-bottom: 40px;
+        position: relative;
+    }
+
+    .jl-navivator-counter::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 110%;
+        background: #1c1c1c;
+        position: absolute;
+        top: -5px ;
+        left: 0;
+
+    }
+
+    .jl-navigator-counter span{
+        font-family:'Opne Sans', sans-serif;
+        font-size: 120px;
+        line-height: 80px;
+        font-weight: 600;
+        
     }
 
     .jl-item-navigator{
         width: 100%;
         display: table;
-        background-color: green;
+
     }
 
     .jl-item-navigator a{
         width: 20px;
         height: 1px;
-        background-color: purple;
         display: block;
-        margin-bottom: 50px;
+        margin: 0 0 50px 30px;
+        background: #4d4c4c;
+    }
+
+    .jl-item-navigator a.jl-item-active{
+        width: 60%;
+        background-color: #2CCB69;
     }
 
     .jl-item-navigator a:last-child{
         margin-bottom:30px ;
     }
 
-    .jl-portfolio-next-prev{
+    .jl-items-next-prev{
         width: 100%;
         height: 45px;
-        background-color: deeppink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2c2c2c;
+        border-radius:23px;
+    }
+
+    .jl-items-next-prev > div{
+        height: 32px;
+    }
+
+    .jl-items-counter{
+        font-family: 'Open Sans', sans-serif;
+        color: #4d4c4c;
+        line-height: 32px;
+    }
+
+    .jl-item-prev, .jl-item-next{
+        width: 45px;
+        color: #2CCB69;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .jl-items-counter span:nth-child(1){
+        color: #bcbcbc;
+    }
+
+    ion-icon{
+        font-size: 32px;
+    }
+
+    .jl-slider-container {
+        background: white;
         display: block;
+        overflow: hidden;
+    }
+
+    .jl-slider-list{
+        width: auto;
+        height: 400px;
+        display: block;
+        background: deeppink;
+        list-style: none;
+    }
+
+    .jl-slider-item{
+        display: block;
+        height: 500px;
+        float: left;
+
     }
 }
 
@@ -418,11 +491,13 @@ p, label{
         margin: 50px 20px 0 20px;
         /* colocando uma linha abaixo no link com formatação */
         position: relative;
+        
 
     }
 
     .jl-menu a:first-child{
         margin-left: 0;
+        
     }
 
     .jl-menu a:hover{
@@ -430,7 +505,7 @@ p, label{
         
     }
 
-    /* continuação da minha formataçõa */
+    /* continuação da minha formatação */
     .jl-menu a::before{
         content: ' ';
         width: 0%;
@@ -441,6 +516,7 @@ p, label{
         bottom: -6px;
         left: 0px;
         transition: all 0.2s ease-out;
+
       }
 
       .jl-menu a:hover::before{
@@ -624,4 +700,29 @@ p, label{
 
 .jl-title-big{
    font-size: 120px;
+}
+
+.jl-no-radius-left{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.red1{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.purple{
+   background: purple;
+}
+
+.blue{
+    background: blue;
+}
+
+.yellow{
+    background: yellow;
 }
