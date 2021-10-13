@@ -13,6 +13,8 @@
  var totalSlide = document.querySelector('.jl-total-slide');
  var currentCounter = 1;
  var asideItems = document.querySelectorAll('.jl-item-navigator a');
+ //var navCounter = document.querySelector('.jl-navigator-counter span');
+
  
  //capturando largura individuais
  var containerWidth = sliderContainer.parentElement.offsetWidth;
@@ -74,6 +76,7 @@
      if((currentCounter >= 0) && (currentCounter < sliderTotalItems)){ 
         currentCounter++;
         currentSlide.innerHTML= counterFormater(currentCounter);
+        navCounter.innerHTML =counterFormater(currentCounter);
     }
   }
 
@@ -82,6 +85,7 @@
     if((currentCounter > 1) && (currentCounter <= sliderTotalItems)){ 
        currentCounter--;
        currentSlide.innerHTML= counterFormater(currentCounter);
+       navCounter.innerHTML =counterFormater(currentCounter);
    }
  }
 
