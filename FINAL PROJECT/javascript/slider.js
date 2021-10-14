@@ -113,8 +113,9 @@
         let mySlideNum = parseInt(sliderItems[sld].getAttribute('data-slide'));
         if(mySlideNum === currentCounter){
             sliderItems[sld].classList.add('jl-slide-active');
-            sliderItems[sld].querySelector('.jl-portfolio-item-box')
-            .classList.add('jl-scale-right');
+            sliderItems[sld].querySelector('.jl-portfolio-item-box').classList.add('jl-scale-right');
+            sliderItems[sld].querySelector('.jl-portfolio-item-thumb img').classList.add('jl-scale-up');
+            sliderItems[sld].querySelector('.jl-portfolio-item-info').classList.add('jl-fade-from-left');
         }
         
     }
@@ -124,6 +125,10 @@
 var RemoveActiveSlide = function(){
     for(var rms=0; rms < sliderItems.length; rms++){
         sliderItems[rms].classList.remove('jl-slide-active');
+        sliderItems[rms].querySelector('.jl-portfolio-item-box').classList.remove('jl-scale-right');
+        sliderItems[rms].querySelector('.jl-portfolio-item-thumb img').classList.remove('jl-scale-up');
+        sliderItems[rms].querySelector('.jl-portfolio-item-info').classList.remove('jl-fade-from-left');
+
      }
 }
 

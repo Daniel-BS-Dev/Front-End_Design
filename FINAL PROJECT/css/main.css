@@ -71,6 +71,19 @@ p, label{
     }
 }
 
+@keyframes scaleUp {
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeFromLeft {
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+
 @media  screen and (min-width:320px) {
     .jl-page-wrapper, .jl-preloader{
         width: 100%;
@@ -472,6 +485,9 @@ p, label{
         width: 100%;
         display: table;
         margin-top: 30px;
+        position: relative;
+        opacity: 0;
+        left: -50px;
     }
 
     .jl-portfolio-item-thumb{
@@ -500,6 +516,7 @@ p, label{
         height: auto;
         position: relative;
         left: -50px;
+        transform: scale(0);
     }
 }
 
@@ -758,21 +775,21 @@ p, label{
       padding-bottom: 15px;
    }
 
-   .jl-mar-30{
+  .jl-mar-30{
     margin: 30px;
-    }
+   }
   .jl-mar-top-30{
       margin-top: 30px;
-    }
-    .jl-mar-right-30{
+   }
+  .jl-mar-right-30{
       margin-right: 30px;
-    }
-    .jl-mar-left-30{
+   }
+  .jl-mar-left-30{
       margin-left: 30px;
-    }
-    .jl-mar-bottom-30{
+   }
+  .jl-mar-bottom-30{
       margin-bottom: 30px;
-    }
+   }
     
     .jl-pad-30{
       padding: 30px;
@@ -824,6 +841,14 @@ p, label{
 
 .jl-scale-right{
     animation: scaleRight 0.7s 0.2s forwards cubic-bezier(0,1.01,.32,1);
+}
+
+.jl-fade-from-left{
+    animation: fadeFromLeft 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
+}
+
+.jl-scale-up{
+    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0,1.01,.32,1);
 }
 
 .jl-title-big{
