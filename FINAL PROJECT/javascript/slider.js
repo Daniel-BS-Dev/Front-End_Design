@@ -79,6 +79,7 @@
         currentCounter++;
         currentSlide.innerHTML= counterFormater(currentCounter);
         navCounter.innerHTML =counterFormater(currentCounter);
+    
     }
   }
 
