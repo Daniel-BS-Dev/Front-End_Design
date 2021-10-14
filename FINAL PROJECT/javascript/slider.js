@@ -13,7 +13,7 @@
  var totalSlide = document.querySelector('.jl-total-slide');
  var currentCounter = 1;
  var asideItems = document.querySelectorAll('.jl-item-navigator a');
- //var navCounter = document.querySelector('.jl-navigator-counter span');
+ var navCounter = document.querySelector('.jl-navigator-counter span');
 
  
  //capturando largura individuais
@@ -45,7 +45,8 @@
     sliderPos -= containerWidth;
      anime({
          targets: sliderList,
-         translateX: sliderPos
+         translateX: sliderPos,
+         easing: 'cubicBezier(0,1.01,.32,1)'
      });
  }
 
@@ -56,7 +57,8 @@
      sliderPos += containerWidth;
       anime({
           targets: sliderList,
-          translateX: sliderPos
+          translateX: sliderPos,
+          easing: 'cubicBezier(0,1.01,.32,1)'
       });
 
  }
@@ -101,8 +103,29 @@
                 width:90
              });
          }
+        
      }
  }
+
+ //Set Active slider
+ var setActiveSlide = function(){
+    for(var sld=0; sld < sliderItems.length; sld++){
+        let mySlideNum = parseInt(sliderItems[sld].getAttribute('data-slide'));
+        if(mySlideNum === currentCounter){
+            sliderItems[sld].classList.add('jl-slide-active');
+            sliderItems[sld].querySelector('.jl-portfolio-item-box')
+            .classList.add('jl-scale-right');
+        }
+        
+    }
+}
+
+// Remove active slider
+var RemoveActiveSlide = function(){
+    for(var rms=0; rms < sliderItems.length; rms++){
+        sliderItems[rms].classList.remove('jl-slide-active');
+     }
+}
 
  var changeActive = function(){
      for(var rm=0; rm < asideItems.length; rm++){
@@ -113,7 +136,10 @@
             width:20
          });
      }
+
+     RemoveActiveSlide();
      setActiveAside();
+     setActiveSlide();
  }
 
  // ACTIONS
