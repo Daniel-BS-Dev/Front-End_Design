@@ -558,10 +558,27 @@ p, label{
      margin-top: 30px;
   }
   
-  .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
+  .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
+    margin-left: 105px;
+ }
+
+ .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info button{
     float: right;
  }
 
+ .jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row{
+     flex-direction: row-reverse;
+
+ }
+
+ .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb button{
+     float: left;
+     margin-left: 75px;
+ }
+
+ .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img{
+     left: 75px;
+}
 }
 
 @media  screen and (min-width:576px) {
