@@ -590,6 +590,13 @@ p, label{
  .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img{
      left: 75px;
 }
+
+/*---sobre---*/
+#jl-avatar-about{
+  position: relative;
+  left: -15px;
+}
+
 }
 
 @media  screen and (min-width:576px) {
@@ -785,6 +792,11 @@ color:#fff;
  font-weight: normal;
 }
 
+.jl-subtitle{
+ font-family: 'Open Sans', 'sans-serif';
+ font-weight: normal;
+}
+
 .jl-title-large{
  font-size: 50px; 
 }
@@ -937,9 +949,52 @@ margin: 15px;
  font-size: 120px;
 }
 
+.jl-title-large{
+  font-size: 90px;
+}
+
 .jl-no-radius-left{
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.jl-box-img{
+  width: 100%;
+  display: table;
+
+}
+
+.jl-img-responsive{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.jl-page-list{
+  list-style: none;
+  font-family: 'Opne Sans', sans-serif;
+  
+}
+
+.jl-page-list > li{
+   font-size: 14px;
+   line-height: 21px;
+   padding-left: 15px;
+   position: relative;
+}
+
+.jl-page-list > li::before{
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  background: #2CCB69;
+
 }
 
 .red{
