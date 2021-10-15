@@ -269,7 +269,7 @@ p, label{
 
   .jl-social-links-circle .jl-social:hover ion-icon{
     color: #2CCB69;
-}
+  }
 
   .jl-social-links-circle .jl-social{
       border-radius: 50%;
@@ -612,6 +612,17 @@ p, label{
 #jl-avatar-about{
   position: relative;
   left: -15px;
+}
+
+/*---hero---*/
+.jl-hero{
+  height: 250px;
+  background-image: url('../pages/img/hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  
 }
 
 }
