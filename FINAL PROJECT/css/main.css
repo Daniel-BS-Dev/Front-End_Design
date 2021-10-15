@@ -90,7 +90,7 @@ p, label{
       height: 100vh;
       display: table;
       background: #1c1c1c;
-      border: 30px solid #000;
+      border: 20px solid #000;
      
 
   }
@@ -616,7 +616,7 @@ p, label{
 
 /*---hero---*/
 .jl-hero{
-  height: 250px;
+  height: 350px;
   background-image: url('../pages/img/hero.png');
   background-repeat: no-repeat;
   background-size: cover;
