@@ -27,7 +27,7 @@
      <div class="jl-logo">
         <img src="../../image/logo.svg" alt="logo João Lemon UX/UI Designer"/>
      </div>
-     <nav class="jl-menu-manage">
+     <nav class="jl-menu">
          <a href="../../index.html" >Home</a>
          <a href="../portfolio.html">PORTFOLIO</a>
          <a href="../sobre.html"    >Sobre</a>
@@ -96,8 +96,8 @@
       <main class="jl-post container">
         <section class="jl-post-section">
             <div class="row">
-                <div class="col-sm-8 offset-sm-2 jl-text-center jl-silver-text">
-                   <h2 class="jl-title jl-title-medium jl-green-text">O Desafio</h2>
+                <div class="col-sm-8 offset-sm-2 jl-text-center jl-mar-bottom-15 jl-silver-text" data-aos-offset="300" data-aos="fade-up">   
+                    <h2 class="jl-title jl-title-medium jl-green-text jl-mar-bottom-15">O Desafio</h2>
                    <p>
                        Lorem ipsum dolor sit amet <span class="jl-green-text">consectetur, adipisicing elit.</span>
                        Quasi sunt dolore ipsam eos, tempora rem reprehenderit iure a.
@@ -111,6 +111,27 @@
                       assumenda totam laboriosam!
                  </p>
                 </div>
+                <div class="col-sm-12 jl-mar-bottom-30 rellax" data-rellax-speed="2">
+                    <img src="../img/processo-1.png" title="Manage It! Processo parte 1" data-aos-offset="300" data-aos="fade-right" class="jl-img-responsive" alt="processo parte 1">
+                </div>
+                <div class="col-sm-6 jl-silver-text jl-mar-top-15 rellax" data-rellax-speed="1" >
+                    <h2 class="jl-title jl-title-medium jl-green-text jl-mar-bottom-15">Gerando Ideias</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet <span class="jl-green-text">consectetur, adipisicing elit.</span>
+                        Quasi sunt dolore ipsam eos, tempora rem reprehenderit iure a.
+                        Sit atque, accusantium ipsum aut maiores aspernatur officia deserunt
+                        assumenda totam laboriosam!
+                   </p>
+                   <p>
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                       Quasi sunt dolore ipsam eos, tempora rem reprehenderit iure a.
+                       Sit atque, accusantium ipsum aut maiores aspernatur officia deserunt
+                       assumenda totam laboriosam!
+                  </p>
+                </div>
+                <div class="col-sm-6 jl-mar-top-15 rellax" data-aos-offset="300" data-aos="fade-left" data-rellax-speed="1">
+                    <img src="../img/processo-2.png" title="Manage It! Processo parte 2" class="jl-img-responsive" alt="processo parte 2">
+                </div>
             </div>
         </section>
       </main>
@@ -118,9 +139,11 @@
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script src="../../javascript/main.js"></script>
     <script>
        AOS.init();
+       var rellax = new Rellax('.rellax');
     </script>
 </body>
 </html>
