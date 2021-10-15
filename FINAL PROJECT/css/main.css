@@ -635,6 +635,7 @@ p, label{
 
 .jl-hero-inner-content{
   position: relative;
+  
  
 }
 
@@ -645,10 +646,10 @@ p, label{
   background: rgba(0,0,0, 0.85);
   display: block;
   position: absolute;
-  left: -30px;
-  top: -30px;
+  left: -15px;
+  top: -15px;
   box-sizing: content-box;
-  padding: 30px;
+  padding: 15px;
 }
 
 .jl-hero-inner-content > .row{
@@ -662,6 +663,15 @@ p, label{
   border-right: 1px solid #2CCB69;
 }
 
+.jl-post p{
+  margin-bottom: 30px;
+}
+
+.jl-post-section{
+  width: 100%;
+  display: table;
+  padding: 45px;
+}
 }
 
 @media  screen and (min-width:576px) {
@@ -669,14 +679,14 @@ p, label{
 }
 
 @media  screen and (min-width:768px) {
-  .jl-menu{
+  .jl-menu, .jl-menu-manage{
       height: 110px;
       display: table;
       float: left;
       margin-left: 30px;
   }
 
-  .jl-menu a{
+  .jl-menu a, .jl-menu-manage a{
       font-family:'open Sans';
       font-size: 16px;
       font-weight: 400;
@@ -691,18 +701,18 @@ p, label{
 
   }
 
-  .jl-menu a:first-child{
+  .jl-menu a:first-child, .jl-menu-manage a:first-child{
       margin-left: 0;
       
   }
 
-  .jl-menu a:hover{
+  .jl-menu a:hover, .jl-menu-manage a:hover{
       color:#2ccb69;
       
   }
 
   /* continuação da minha formatação */
-  .jl-menu a::before{
+  .jl-menu a::before, .jl-menu-manage a:hover::before{
       content: ' ';
       width: 0%;
       height: 4px;
@@ -715,10 +725,24 @@ p, label{
 
   }
 
- .jl-menu a:hover::before{
+ .jl-menu a:hover::before, .jl-menu-manage a:hover::before{
         width: 100%;
   }
+
+  .jl-menu-manage a{
+    color: #000;
+    font-weight: 900;
+    font-family: sans-serif;
+  }
   
+  .jl-menu-manage a:hover::before{
+    background: #fff;
+    transition: all 0.2s ease-out;
+  }
+
+  .jl-menu-manage a:hover{
+    color: #fff;
+  }
 }
 
 @media  screen and (min-width:992px) {
@@ -866,6 +890,10 @@ color:#fff;
  font-size: 70px; 
 }
 
+.jl-title-medium{
+  font-size: 48px;
+}
+
 .jl-green-text{
    color: #2CCB69;
 }
@@ -880,6 +908,10 @@ color:#fff;
 
 .jl-black-text{
  color: #000;
+}
+
+.jl-text-center{
+  text-align: center;
 }
 
 /* background */
