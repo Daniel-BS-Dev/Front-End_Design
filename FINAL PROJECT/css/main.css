@@ -663,6 +663,11 @@ p, label{
   border-right: 1px solid #2CCB69;
 }
 
+.jl-post{
+  width: 100%;
+  display: table;
+}
+
 .jl-post p{
   margin-bottom: 30px;
 }
@@ -672,6 +677,17 @@ p, label{
   display: table;
   padding: 45px;
 }
+
+.jl-pre-gallery{
+  padding-bottom: 350px;
+}
+
+.jl-post-gallery .container{
+  position: relative;
+  top: -270px;
+  
+}
+
 }
 
 @media  screen and (min-width:576px) {
