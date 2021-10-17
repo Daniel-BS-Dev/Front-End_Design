@@ -688,6 +688,10 @@ p, label{
   
 }
 
+.jl-post-gallery{
+  display: block;
+}
+
 }
 
 @media  screen and (min-width:576px) {
