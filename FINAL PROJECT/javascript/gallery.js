@@ -1,10 +1,22 @@
-var overlay = document.querySelector('.jl-overlay');
+var overlay        = document.querySelector('.jl-overlay');
 var frameContainer = document.querySelector('.jl-gallery-frame-container');
-var frameImage = document.querySelector('.jl-gallery-frame-image');
-var galleryImages = document.querySelectorAll('.jl-thumb-img');
-var closeGallery = document.querySelectorAll('.jl-toggle-gallery');
-var btnNext = document.querySelector('.jl-item-next');
-var btnPrev = document.querySelector('.jl-item-prev');
+var frameImage     = document.querySelector('.jl-gallery-frame-image');
+var galleryImages  = document.querySelectorAll('.jl-thumb-img');
+var closeGallery   = document.querySelectorAll('.jl-toggle-gallery');
+var btnNext        = document.querySelector('.jl-item-next');
+var btnPrev        = document.querySelector('.jl-item-prev');
+var currCounter    = document.querySelector('.jl-current-slide');
+var totalCounter   = document.querySelector(".jl-total-slide");
+
+var counterFormater = function(n){
+  if(n<10){
+    return "0"+n;
+  }else{
+    return n;
+  }
+}
+
+totalCounter.innerHTML = counterFormater(galleryImages.length);
 
 const getImageSrc = function(){
     for(var i=0; i<galleryImages.length; i++){
@@ -17,6 +29,8 @@ const getImageSrc = function(){
 
         overlay.classList.add('jl-is-open');
         frameContainer.classList.add('jl-is-open');
+
+        currCounter.innerHTML = counterFormater(itemNum);
       });
     }
 }
@@ -45,18 +59,18 @@ for(var n=0; n<galleryImages.length;n++){
   var itemNumber = parseInt(item.getAttribute('data-item'));
 
   if(itemNumber === nextItemNum){
+    //Captura o data-src
    var nextSrc = item.getAttribute('data-src');
    var nextIndex = item.getAttribute('data-item');
 
+   //Passamos o data-src para a tag de img no frame
    frameImage.setAttribute('src',nextSrc);
    frameImage.setAttribute('data-index',nextIndex);
+
+   currCounter.innerHTML = counterFormater(nextIndex);
   }
 }
 
-//Captura o data-src
-
-
-//Passamos o data-src para a tag de img no frame
 }
 
 btnNext.addEventListener('click',function(){
@@ -83,6 +97,8 @@ const prevItem = function(){
   
      frameImage.setAttribute('src',prevSrc);
      frameImage.setAttribute('data-index',prevIndex);
+
+     currCounter.innerHTML = counterFormater(prevIndex);
     }
   }
   
