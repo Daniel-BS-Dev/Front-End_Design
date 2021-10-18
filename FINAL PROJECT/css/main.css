@@ -739,6 +739,12 @@ img.jl-gallery-frame{
   top: 15px;
 }
 
+.jl-gallery-frame-container .jl-items-next-prev{
+  width: 150px;
+  margin: 570px auto 0 auto;
+  
+}
+
 .jl-close-gallery{
   width: 45px;
   height: 45px;
